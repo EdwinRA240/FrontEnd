@@ -1,4 +1,10 @@
 function CreatePage() {
+
+    const handleInput = () => {
+        console.log(event.target.id);
+        console.log(event.target.value);
+    }
+    
     return(
         <>
             <form>
@@ -16,9 +22,10 @@ function CreatePage() {
                 <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"/>
                 <label for="vehicle3"> I have a boat</label>
                 <br/>
+                
                 <span>Equipo: </span>
                 <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname"/>
+                <input type="text" id="fname" name="fname" onChange={handleInput}/>
                 <br/>
                 <br/>
                 <label for="lname">Last name:</label>
