@@ -1,17 +1,17 @@
-function Card(props) {
+function Card(trainer) {
     return(
         <>
             <div class="card">
             <div class="image-container"></div>
             <div class="card-content">
                 <div class="stats">
-                    <p class="region-tag">{props.trainer.region}</p>
+                    <p class="region-tag">{trainer.region}</p>
                     <div class="rank">
                         <p class="rank-label">rango</p>
-                        <p class="rank-tag">{props.trainer.rango}</p>
+                        <p class="rank-tag">{trainer.rango}</p>
                     </div>
                 </div>
-                <h2 class="trainer-name">{props.trainer.name}</h2>
+                <h2 class="trainer-name">{trainer.name}</h2>
                 <div class="team">
                     <h3 class="team-label">Equipo</h3>
                     <div class="team-members">
