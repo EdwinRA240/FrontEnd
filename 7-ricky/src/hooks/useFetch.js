@@ -1,8 +1,9 @@
-import { React, useState } from 'react'
+import { useState, useEffect } from 'react'
+import Swal from 'sweetalert2';
 
 
 export const useFetch = (name) => {
-    const [characters, setChatacters] = useState([]);
+    const [characters, setCharacters] = useState([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -12,7 +13,7 @@ export const useFetch = (name) => {
     const getCharacter = async (name) =>{
         setLoading(true)
         try {
-            const res = await fetch('https://rickandmortyapi.com/api/character/?name=rick');
+            const res = await fetch(`https://rickandmortyapi.com/api/character/?name=${name}`);
     
             if (!res.ok) {
                 console.log(res);
