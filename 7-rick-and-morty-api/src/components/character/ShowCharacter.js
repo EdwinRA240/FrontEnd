@@ -2,7 +2,7 @@ import Character from "./Character";
 
 import React from 'react'
 import Loading from "../../styled-components/Loading";
-import { useFetch } from "../../hooks/useFecth";
+import { useFetch } from "../../hooks/useFetch";
 
 const ShowCharacter = ({name}) => {
     const [characters, loading] = useFetch(name);

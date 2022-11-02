@@ -8,7 +8,7 @@ const Character = ({character =""}) => {
         <div className="card">
             <img 
             src={image}
-            alt={`image-${name}`}
+            alt={`img-${name}`}
             className="card-img-top"
             ></img>
             <div className="card-body">
